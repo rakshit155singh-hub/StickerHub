@@ -1,273 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StickerHub | Premium Sticker Packs</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-}
-
-body{
-    background:#0b0b0f;
-    color:white;
-}
-
-header{
-    background:linear-gradient(135deg,#111,#1b1b24);
-    padding:30px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-bottom:1px solid rgba(255,255,255,0.08);
-}
-
-.logo{
-    font-size:32px;
-    font-weight:700;
-    color:#ffffff;
-    letter-spacing:1px;
-}
-
-.logo span{
-    color:#d4af37;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:30px;
-    font-weight:500;
-    transition:0.3s;
-}
-
-nav a:hover{
-    color:#d4af37;
-}
-
-.hero{
-    min-height:80vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:50px 8%;
-    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),
-    url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4');
-    background-size:cover;
-    background-position:center;
-}
-
-.hero-content h1{
-    font-size:58px;
-    margin-bottom:20px;
-}
-
-.hero-content h1 span{
-    color:#d4af37;
-}
-
-.hero-content p{
-    font-size:18px;
-    max-width:700px;
-    margin:auto;
-    color:#d0d0d0;
-    line-height:1.7;
-}
-
-.shop-btn{
-    display:inline-block;
-    margin-top:35px;
-    padding:16px 40px;
-    background:#d4af37;
-    color:black;
-    font-weight:600;
-    text-decoration:none;
-    border-radius:10px;
-    transition:0.3s;
-}
-
-.shop-btn:hover{
-    transform:translateY(-3px);
-}
-
-.section-title{
-    text-align:center;
-    margin-top:80px;
-    font-size:40px;
-}
-
-.products{
-    padding:60px 8%;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:#14141c;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 10px 30px rgba(0,0,0,0.35);
-    transition:0.3s;
-    border:1px solid rgba(255,255,255,0.05);
-}
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.card img{
-    width:100%;
-    height:240px;
-    object-fit:cover;
-}
-
-.card-content{
-    padding:25px;
-}
-
-.card-content h3{
-    font-size:24px;
-    margin-bottom:10px;
-}
-
-.card-content p{
-    color:#bdbdbd;
-    line-height:1.6;
-    margin-bottom:18px;
-}
-
-.price{
-    font-size:28px;
-    color:#d4af37;
-    font-weight:700;
-    margin-bottom:20px;
-}
-
-.buy-btn{
-    width:100%;
-    padding:14px;
-    border:none;
-    background:#d4af37;
-    color:black;
-    font-weight:700;
-    border-radius:10px;
-    cursor:pointer;
-    font-size:16px;
-}
-
-footer{
-    margin-top:80px;
-    padding:40px 8%;
-    text-align:center;
-    background:#101015;
-    border-top:1px solid rgba(255,255,255,0.05);
-}
-
-footer p{
-    color:#bdbdbd;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StickerHub | Premium Sticker Packs</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background: #0f0f0f; color: white; }
+    header { background: #111; padding: 20px; text-align: center; border-bottom: 1px solid #222; }
+    header h1 { font-size: 2.2rem; color: #ffd700; }
+    header p { margin-top: 8px; color: #ccc; }
+    .hero { text-align: center; padding: 60px 20px; }
+    .hero h2 { font-size: 2.5rem; margin-bottom: 15px; }
+    .hero p { max-width: 700px; margin: auto; color: #bbb; line-height: 1.6; }
+    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; padding: 40px; }
+    .card { background: #181818; border: 1px solid #2a2a2a; border-radius: 14px; padding: 25px; text-align: center; transition: 0.3s; }
+    .card:hover { transform: translateY(-5px); border-color: #ffd700; }
+    .card h3 { margin-bottom: 10px; color: #ffd700; }
+    .price { font-size: 1.5rem; margin: 15px 0; font-weight: bold; }
+    .buy-btn { background: #ffd700; color: black; border: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; cursor: pointer; }
+    .about, .contact { padding: 50px 20px; text-align: center; }
+    .about { background: #141414; }
+    .about h2, .contact h2 { margin-bottom: 15px; color: #ffd700; }
+    footer { text-align: center; padding: 20px; border-top: 1px solid #222; color: #999; }
+  </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">Sticker<span>Hub</span></div>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Shop</a>
-        <a href="#">Collections</a>
-        <a href="#">Contact</a>
-    </nav>
+  <h1>StickerHub</h1>
+  <p>Luxury Premium Sticker Packs for Global Buyers</p>
 </header>
 
 <section class="hero">
-    <div class="hero-content">
-        <h1>Luxury Premium <span>Sticker Packs</span></h1>
-        <p>
-            Discover exclusive high-quality aesthetic sticker packs crafted
-            for creators, laptop lovers, journaling enthusiasts, and premium collectors.
-            Stylish. Elegant. Powerful.
-        </p>
-
-        <a href="#shop" class="shop-btn">Shop Now</a>
-    </div>
+  <h2>Premium Stickers. Premium Style.</h2>
+  <p>
+    Explore high-quality sticker bundles designed for anime lovers, car enthusiasts,
+    gamers, luxury lifestyle fans, and creators. Instant premium checkout with PayPal.
+  </p>
 </section>
 
-<h2 class="section-title" id="shop">Premium Packs</h2>
-
 <section class="products">
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=600" alt="Starter Sticker Pack" style="width:100%; border-radius:10px; margin-bottom:15px;" />
+    <h3>Starter Sticker Pack</h3>
+    <p>12 stylish mixed premium stickers for beginners. Waterproof and glossy finish.</p>
+    <div class="price">$9.99</div>
+    <a href="https://www.paypal.com/paypalme/RakshitSingh120/9.99USD" target="_blank">
+      <button class="buy-btn">Buy Now</button>
+    </a>
+  </div>
 
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="">
-        <div class="card-content">
-            <h3>Starter Pack</h3>
-            <p>6 premium aesthetic stickers for laptops, phones and journals.</p>
-            <div class="price">$9.99</div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600" alt="Premium Anime Pack" style="width:100%; border-radius:10px; margin-bottom:15px;" />
+    <h3>Premium Anime Pack</h3>
+    <p>Top anime stickers with premium glossy finish. Perfect for laptops and phones.</p>
+    <div class="price">$14.99</div>
+    <a href="https://www.paypal.com/paypalme/RakshitSingh120/14.99USD" target="_blank">
+      <button class="buy-btn">Buy Now</button>
+    </a>
+  </div>
 
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                <input type="hidden" name="cmd" value="_xclick">
-                <input type="hidden" name="business" value="rakshitsingh18.45@gmail.com">
-                <input type="hidden" name="item_name" value="Starter Sticker Pack">
-                <input type="hidden" name="amount" value="9.99">
-                <input type="hidden" name="currency_code" value="USD">
-                <button class="buy-btn" type="submit">Buy with PayPal</button>
-            </form>
-        </div>
-    </div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600" alt="Luxury Car Sticker Pack" style="width:100%; border-radius:10px; margin-bottom:15px;" />
+    <h3>Luxury Car Sticker Pack</h3>
+    <p>Sports cars, supercars and luxury badge sticker designs with premium quality.</p>
+    <div class="price">$19.99</div>
+    <a href="https://www.paypal.com/paypalme/RakshitSingh120/19.99USD" target="_blank">
+      <button class="buy-btn">Buy Now</button>
+    </a>
+  </div>
 
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="">
-        <div class="card-content">
-            <h3>Luxury Pack</h3>
-            <p>8 elite glossy premium stickers with exclusive premium finish.</p>
-            <div class="price">$19.99</div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600" alt="Ultimate Bundle" style="width:100%; border-radius:10px; margin-bottom:15px;" />
+    <h3>Ultimate Bundle</h3>
+    <p>Full premium collection with best-value pricing. Best seller for serious buyers.</p>
+    <div class="price">$29.99</div>
+    <a href="https://www.paypal.com/paypalme/RakshitSingh120/29.99USD" target="_blank">
+      <button class="buy-btn">Buy Now</button>
+    </a>
+  </div>
+</section>
 
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                <input type="hidden" name="cmd" value="_xclick">
-                <input type="hidden" name="business" value="rakshitsingh18.45@gmail.com">
-                <input type="hidden" name="item_name" value="Luxury Sticker Pack">
-                <input type="hidden" name="amount" value="19.99">
-                <input type="hidden" name="currency_code" value="USD">
-                <button class="buy-btn" type="submit">Buy with PayPal</button>
-            </form>
-        </div>
-    </div>
+<section class="about">
+  <h2>Why StickerHub?</h2>
+  <p>
+    We deliver premium-quality sticker collections built for customers who value design,
+    style, and uniqueness. Fast checkout, premium branding, and global-ready selling.
+  </p>
+</section>
 
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="">
-        <div class="card-content">
-            <h3>Ultimate VIP Pack</h3>
-            <p>12 luxury premium stickers with limited edition exclusive designs.</p>
-            <div class="price">$29.99</div>
+<section class="about">
+  <h2>Instant Digital Delivery</h2>
+  <p>
+    After PayPal payment, customers can instantly download their digital sticker packs.
+    Upload your ZIP files in the same folder as index.html and these buttons will work.
+  </p>
+  <br>
 
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                <input type="hidden" name="cmd" value="_xclick">
-                <input type="hidden" name="business" value="rakshitsingh18.45@gmail.com">
-                <input type="hidden" name="item_name" value="Ultimate VIP Sticker Pack">
-                <input type="hidden" name="amount" value="29.99">
-                <input type="hidden" name="currency_code" value="USD">
-                <button class="buy-btn" type="submit">Buy with PayPal</button>
-            </form>
-        </div>
-    </div>
+  <a href="starter-pack.zip" download>
+    <button class="buy-btn">Download Starter Pack</button>
+  </a>
+  <br><br>
 
+  <a href="anime-pack.zip" download>
+    <button class="buy-btn">Download Anime Pack</button>
+  </a>
+  <br><br>
+
+  <a href="car-pack.zip" download>
+    <button class="buy-btn">Download Car Pack</button>
+  </a>
+  <br><br>
+
+  <a href="ultimate-bundle.zip" download>
+    <button class="buy-btn">Download Ultimate Bundle</button>
+  </a>
+</section>
+
+<section class="contact">
+  <h2>Contact Us</h2>
+  <p>Email: rakshitsingh18.45@gmail.com</p>
+  <p>Pay securely using PayPal for instant international checkout.</p>
 </section>
 
 <footer>
-    <p>
-        © 2026 StickerHub — Premium Luxury Sticker Collections | Powered by PayPal
-    </p>
+  <p>© 2026 StickerHub. All Rights Reserved.</p>
 </footer>
 
 </body>
 </html>
+<!
